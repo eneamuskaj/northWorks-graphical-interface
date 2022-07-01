@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="logo" src="./logo.png" />
+    <div class="main-container">
+      <div class="library">
+        <button class="button" id="part-library">Part Library</button>
+        <div class="library-content">
+          <img class="library-item" src="https://picsum.photos/id/1025/200" />
+          <img class="library-item" src="https://picsum.photos/id/1026/200" />
+          <img class="library-item" src="https://picsum.photos/id/1027/200" />
+          <img class="library-item" src="https://picsum.photos/id/1028/200" />
+          <img class="library-item" src="https://picsum.photos/id/1025/200" />
+          <img class="library-item" src="https://picsum.photos/id/1039/200" />
+          <img class="library-item" src="https://picsum.photos/id/1035/200" />
+          <img class="library-item" src="https://picsum.photos/id/1032/200" />
+          <img class="library-item" src="https://picsum.photos/id/1033/200" />
+        </div>
+        <button class="button" id="standard-library">Standard Library</button>
+        <button class="button" id="community">Community</button>
+      </div>
+      <div class="presentation">
+        <div class="presentation-buttons">
+          <button class="button" id="print-setup">Print Setup</button>
+          <button class="button" id="job-queuebtn">Job Queue</button>
+        </div>
+        <div id="job-queue" style="display: none">
+          <div>
+            <p>Part Queue</p>
+            <p>Queue Config</p>
+            <table class="table" id="queue-config">
+              <tr>
+                <th>Part Name</th>
+                <th>Qty</th>
+                <th>Material</th>
+                <th>Size</th>
+              </tr>
+              <tr>
+                <td>Original Crane</td>
+                <td>15</td>
+                <td>PLA</td>
+                <td>500x500x725</td>
+              </tr>
+              <tr>
+                <td>Pipe Fitting</td>
+                <td>27</td>
+                <td>ASA</td>
+                <td>100x75x150</td>
+              </tr>
+              <tr>
+                <td>Teardrop</td>
+                <td>3</td>
+                <td>PLA</td>
+                <td>400x400x600</td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <p>Jobs</p>
+            <p>Generate Jobs</p>
+            <table class="table" id="generate-jobs">
+              <tr>
+                <th>Job Name</th>
+                <th>Parts</th>
+                <th>Printer</th>
+                <th>Material</th>
+                <th>ETA</th>
+              </tr>
+              <tr>
+                <td>#10</td>
+                <td>Origami</td>
+                <td>600-01</td>
+                <td>PLA</td>
+                <td>10:03</td>
+              </tr>
+              <tr>
+                <td>#11</td>
+                <td>Pump</td>
+                <td>600-02</td>
+                <td>asa</td>
+                <td>13:03</td>
+              </tr>
+              <tr></tr>
+              <tr>
+                <td>#12</td>
+                <td>Chair Leg</td>
+                <td>600-02</td>
+                <td>PLA</td>
+                <td>20:10</td>
+              </tr>
+              <tr></tr>
+            </table>
+          </div>
+        </div>
+        <div class="d3-render" id="d3-render" style="display: block">
+          <iframe
+            class="responsive-iframe"
+            src="https://gmail2611826.autodesk360.com/shares/public/SH9285eQTcf875d3c53994c19ceaa11eb79f?mode=embed"
+            width="1024"
+            height="768"
+            allowfullscreen="true"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            frameborder="0"
+          ></iframe>
+          <div class="print-setup-popup">
+            <button id="print-setup-btn">Print Setup</button>
+            <div id="print-setup-second">
+              <div class="slidecontainer">
+                <p class="slider-parahraph">
+                  Appearance: <span id="demo1"></span>
+                </p>
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="50"
+                  class="slider"
+                  id="myRange1"
+                />
+              </div>
+              <div class="slidecontainer">
+                <p class="slider-parahraph">
+                  Accuracy: <span id="demo2"></span>
+                </p>
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="50"
+                  class="slider"
+                  id="myRange2"
+                />
+              </div>
+              <div class="slidecontainer">
+                <p class="slider-parahraph">Speed: <span id="demo3"></span></p>
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="50"
+                  class="slider"
+                  id="myRange3"
+                />
+              </div>
+            </div>
+            <button id="print-criteria-btn">Print Criteria</button>
+            <div id="print-criteria" style="display: none">
+              <div class="print-criteria-colors">
+                <img class="print-criteria-img" src="./1.jpg" />
+                <p>Overhangs</p>
+              </div>
+              <div class="print-criteria-colors">
+                <img class="print-criteria-img" src="./2.jpg" />
+                <p>Thin Layer</p>
+              </div>
+              <div class="print-criteria-colors">
+                <img class="print-criteria-img" src="./3.jpg" />
+                <p>Small Layer</p>
+              </div>
+            </div>
+            <button id="material-selection-btn">Material Selection</button>
+            <div id="material-selection" style="display: none">
+              <p>PLA</p>
+              <p>ASA</p>
+            </div>
+          </div>
+          <div class="print-stats">
+            <p>Print Time: 2hrs</p>
+            <p>Print Material: 123g</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
