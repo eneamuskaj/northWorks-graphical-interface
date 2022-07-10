@@ -79,3 +79,49 @@ criteriaViewBtn.addEventListener("click", function () {
     materialSelectionView.style.display = "none";
   }
 });
+
+//gallery event listeners
+
+let one = document.getElementById("one");
+let two = document.getElementById("two");
+let three = document.getElementById("three");
+let four = document.getElementById("four");
+let five = document.getElementById("five");
+let six = document.getElementById("six");
+
+let responsiveIFrame = document.getElementById("responsive-iframe");
+one.addEventListener("click", function (e) {
+  e.preventDefault();
+  responsiveIFrame.src =
+    "https://myhub.autodesk360.com/ue29fc3c3/shares/public/SH35dfcQT936092f0e43c53ff57927a73e8a?mode=embed";
+});
+
+two.addEventListener("click", function (e) {
+  e.preventDefault();
+  responsiveIFrame.src =
+    "https://myhub.autodesk360.com/ue29fc3c3/shares/public/SH35dfcQT936092f0e435a60bc564f36e80b?mode=embed";
+});
+
+three.addEventListener("click", function (e) {
+  e.preventDefault();
+  responsiveIFrame.src =
+    "https://myhub.autodesk360.com/ue29fc3c3/shares/public/SH35dfcQT936092f0e4365c4df8f6df3c2ee?mode=embed";
+});
+
+four.addEventListener("click", function (e) {
+  e.preventDefault();
+  responsiveIFrame.src =
+    "https://myhub.autodesk360.com/ue29fc3c3/shares/public/SH35dfcQT936092f0e43a76a3bc5c41522c8?mode=embed";
+});
+
+five.addEventListener("click", function (e) {
+  e.preventDefault();
+  responsiveIFrame.src =
+    "https://myhub.autodesk360.com/ue29fc3c3/shares/public/SH35dfcQT936092f0e432d0696b1e22dd6be?mode=embed";
+});
+
+six.addEventListener("click", function (e) {
+  e.preventDefault();
+  responsiveIFrame.src =
+    "https://myhub.autodesk360.com/ue29fc3c3/shares/public/SH35dfcQT936092f0e43da324c23a852e804?mode=embed";
+});
